@@ -12,9 +12,10 @@
   remote = yellow
 
 [core]
-  editor = subl -n -w
+	editor = /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl
   pager = less -FRSX
   mergeoptions = --no-edit
+	excludesfile = /Users/floup/.gitignore_global
 
 [alias]
   co = checkout
@@ -47,9 +48,20 @@
 [push]
 	default = simple
 [filter "media"]
+	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
-	required = true
 [user]
 	email = info@norydev.com
 	name = Fabien Loup
+	signingkey = C446510C
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
