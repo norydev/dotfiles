@@ -43,7 +43,7 @@
   unstage = reset HEAD --
 
   # Add all, commit amend and force push
-  acap = !git add . && git commit --amend && git push origin HEAD -f
+  acap = !git add . && git commit --amend --no-edit && git push origin HEAD -f
 
 [help]
   autocorrect = 1
