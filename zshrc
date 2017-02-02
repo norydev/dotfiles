@@ -34,5 +34,10 @@ bindkey '^[OB' history-substring-search-down
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Android studio
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
 # added by travis gem
 [ -f /Users/floup/.travis/travis.sh ] && source /Users/floup/.travis/travis.sh
