@@ -41,3 +41,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # added by travis gem
 [ -f /Users/floup/.travis/travis.sh ] && source /Users/floup/.travis/travis.sh
+
+# npm
+export PATH="$HOME/.npm-packages/bin:$PATH"
