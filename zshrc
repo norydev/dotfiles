@@ -43,4 +43,10 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 [ -f /Users/floup/.travis/travis.sh ] && source /Users/floup/.travis/travis.sh
 
 # npm
+export PATH="$HOME/.npm-packages/bin:$PATH"export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.npm-packages/bin:$PATH"
+
+export NPM_TOKEN="e114b51b-3639-4055-b63e-7a834241e86d"
+export PATH="/usr/local/opt/node@8/bin:$PATH"

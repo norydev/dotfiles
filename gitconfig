@@ -43,7 +43,7 @@
   unstage = reset HEAD --
 
   # Add all, commit amend and force push
-  acap = !git add . && git commit --amend --no-edit && git push origin HEAD -f
+  acap = !git add . && git commit --amend --no-edit && git push origin HEAD --force-with-lease
 
 [help]
   autocorrect = 1
@@ -57,16 +57,17 @@
 [user]
 	email = info@norydev.com
 	name = Fabien Loup
-	signingkey = 42F526F6
+	signingkey = 6E60AAAC
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	gpgsign = true
+	gpgSign = true
+	template = /Users/floup/.stCommitMsg
