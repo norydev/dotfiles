@@ -12,7 +12,7 @@
   remote = yellow
 
 [core]
-	editor = /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl
+	editor = subl -n -w
   pager = less -FRSX
   mergeoptions = --no-edit
 	excludesfile = /Users/floup/.gitignore_global
@@ -43,7 +43,11 @@
   unstage = reset HEAD --
 
   # Add all, commit amend and force push
-  acap = !git add . && git commit --amend --no-edit && git push origin HEAD --force-with-lease
+  yolo = !git add . && git commit --amend --no-edit && git push origin HEAD --force-with-lease
+  acap = yolo
+  # Rebase on master and force push
+  catchup = !git pull --rebase origin master && git push origin HEAD --force-with-lease
+
 
 [help]
   autocorrect = 1
@@ -71,3 +75,5 @@
 [commit]
 	gpgSign = true
 	template = /Users/floup/.stCommitMsg
+[includeIf "gitdir:~/code/silverfin"]
+  path = ~/code/silverfin/.gitconfig_include
