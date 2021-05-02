@@ -59,9 +59,9 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [user]
-	email = info@norydev.com
+	email = fabien@norydev.com
 	name = Fabien Loup
-	signingkey = 6E60AAAC
+	signingkey = 5A30988D
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -77,3 +77,5 @@
 	template = /Users/floup/.stCommitMsg
 [includeIf "gitdir:~/code/silverfin"]
   path = ~/code/silverfin/.gitconfig_include
+[pull]
+	rebase = false

@@ -13,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git sublime zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
-export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/usr/texbin:~/bin'
+export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin:/usr/texbin:~/bin'
 
 # Disable zsh correction
 unsetopt correct_all
@@ -42,14 +42,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 # added by travis gem
 [ -f /Users/floup/.travis/travis.sh ] && source /Users/floup/.travis/travis.sh
 
-# npm
-export PATH="$HOME/.npm-packages/bin:$PATH"
-
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/.npm-packages/bin:$PATH"
-
-export NPM_TOKEN="e114b51b-3639-4055-b63e-7a834241e86d"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 export EDITOR="subl"
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
@@ -65,10 +58,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 function switch-kubeconfig {
   cluster=${1}
@@ -108,4 +97,3 @@ function switch-kubeconfig {
 }
 
 source '/Users/floup/code/silverfin/silverfin/bin/sfctl-completion.zsh'
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
