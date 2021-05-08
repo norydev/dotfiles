@@ -75,7 +75,5 @@
 [commit]
 	gpgSign = true
 	template = /Users/floup/.stCommitMsg
-[includeIf "gitdir:~/code/silverfin"]
-  path = ~/code/silverfin/.gitconfig_include
 [pull]
 	rebase = false
