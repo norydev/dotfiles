@@ -18,11 +18,6 @@ export PATH='/usr/local/bin:/usr/local/share:/usr/bin:/bin:/usr/sbin:/sbin:/usr/
 # Disable zsh correction
 unsetopt correct_all
 
-# To use Homebrew's directories rather than ~/.rbenv
-export RBENV_ROOT=$HOME/.rbenv
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH="./bin:${RBENV_ROOT}/shims:${RBENV_ROOT}/bin:${PATH}"
-
 # Gather handy aliases
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
@@ -49,12 +44,17 @@ export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 
+# openssl
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+# node
+eval "$(nodenv init -)"
+export PATH="$HOME/.nodenv/bin:$PATH"
+
+# ruby
+# Load rbenv if installed (to manage your Ruby versions)
+export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
+type -a rbenv > /dev/null && eval "$(rbenv init - zsh)"

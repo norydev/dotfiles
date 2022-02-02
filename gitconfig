@@ -12,7 +12,7 @@
   remote = yellow
 
 [core]
-	editor = subl -n -w
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
   pager = less -FRSX
   mergeoptions = --no-edit
 	excludesfile = /Users/floup/.gitignore_global
@@ -61,7 +61,7 @@
 [user]
 	email = fabien@norydev.com
 	name = Fabien Loup
-	signingkey = 5A30988D
+	signingkey = 85EC6DE4
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
